@@ -16,3 +16,10 @@ screenshots. They make no claims about usage, ratings or deployment performance.
 Project source code stays in the linked repositories. The extension pages link
 to their published store listings. See `LAUNCH-KIT.md` for ready-to-edit launch
 copy; nothing is posted automatically.
+
+The hero uses an original AI-generated still with an eight-second, silent camera
+animation encoded as H.264 (`assets/hero.mp4`, about 350 KB). It is atmospheric
+artwork, not a product demonstration or fully generated moving scene. The WebP
+poster is about 32 KB. Reduced-motion and data-saving preferences use the still;
+the background pauses off screen or in a hidden tab and has a keyboard-accessible
+pause control. The reference recording is not included in this repository.

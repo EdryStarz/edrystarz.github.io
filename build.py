@@ -17,50 +17,47 @@ PROJECTS = [
 ]
 
 def header(title, description, path='', image='assets/overview.png'):
- return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title><meta name="description" content="{escape(description,quote=True)}"><link rel="canonical" href="{BASE}/{path}"><meta property="og:type" content="website"><meta property="og:title" content="{escape(title,quote=True)}"><meta property="og:description" content="{escape(description,quote=True)}"><meta property="og:url" content="{BASE}/{path}"><meta property="og:image" content="{BASE}/{image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/script.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="/">edry<span>starz</span><i aria-hidden="true">✳</i></a><nav aria-label="Main"><a href="/#projects">Projects</a><a href="https://github.com/EdryStarz">GitHub ↗</a></nav></header>'''
+ return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title><meta name="description" content="{escape(description,quote=True)}"><link rel="canonical" href="{BASE}/{path}"><meta property="og:type" content="website"><meta property="og:title" content="{escape(title,quote=True)}"><meta property="og:description" content="{escape(description,quote=True)}"><meta property="og:url" content="{BASE}/{path}"><meta property="og:image" content="{BASE}/{image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/script.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="/">EdryStarz</a><nav aria-label="Main"><a href="/#projects">Projects</a><a href="https://github.com/EdryStarz">GitHub ↗</a></nav></header>'''
 
 def footer():
- return '''<footer><a class="brand" href="/">edrystarz</a><p>Useful software. Clear sources. Honest project status.</p><a href="https://github.com/EdryStarz">Explore the code ↗</a></footer><div id="feedback" role="status" aria-live="polite"></div></body></html>'''
+ return '<footer><a href="/">EdryStarz</a><p>Independent software projects</p><a href="https://github.com/EdryStarz">GitHub ↗</a></footer><div id="feedback" role="status" aria-live="polite"></div></body></html>'
 
 def share(url):
- return f'''<div class="share"><button type="button" data-share="{url}">Share this project ↗</button><button type="button" data-copy="{url}">Copy link</button></div>'''
-
-def art(p):
- return f'''<div class="art" style="--tint:{p['color']}" aria-hidden="true"><div class="art-top"><span>EDRYSTARZ / {p['category'].upper()}</span><span>↗</span></div><strong>{escape(p['name'])}</strong><div class="art-bottom">{p['motif']}</div></div>'''
+ return f'<div class="share"><button type="button" data-share="{url}">Share ↗</button><button type="button" data-copy="{url}">Copy link</button></div>'
 
 def card(p,i):
- return f'''<article class="project" data-category="{p['category']}"><a class="art-link" href="/{p['slug']}/" aria-label="Explore {p['name']}">{art(p)}</a><div class="card-meta"><span>{i:02d} / {p['category']}</span><span>{p['status']}</span></div><h3><a href="/{p['slug']}/">{p['name']} <span aria-hidden="true">↗</span></a></h3><p>{escape(p['description'])}</p><a class="text-link" href="/{p['slug']}/">Explore project <span aria-hidden="true">→</span></a></article>'''
+ return f'<article class="project" data-category="{p["category"]}"><span class="project-number">{i:02d}</span><div><div class="card-meta">{p["category"]} <span> / {p["status"]}</span></div><h3><a href="/{p["slug"]}/">{p["name"]}<span aria-hidden="true">↗</span></a></h3><p>{escape(p["description"])}</p></div><a class="project-open" href="/{p["slug"]}/" aria-label="Explore {p["name"]}">View project ↗</a></article>'
 
 (ROOT/'assets').mkdir(exist_ok=True)
-index=header('EdryStarz — practical apps & browser extensions','Published browser extensions, local AI learning tools and practical Windows utilities.')+'''<main id="main"><section class="hero"><div class="eyebrow">INDEPENDENT PROJECTS / EDRYSTARZ</div><h1>Small tools.<br><span>Real usefulness.</span></h1><div class="hero-bottom"><p>Browser extensions you can install today.<br>Local AI tools and desktop apps you can explore.<br>Built around everyday problems.</p><a class="button" href="#projects">Find your next useful tool <span>↓</span></a></div><div class="hero-stamp" aria-hidden="true">BUILD<br>USE<br>REPEAT<span>↗</span></div></section><section class="catalog" id="projects"><div class="section-heading"><div><div class="eyebrow">THE PROJECT COLLECTION</div><h2>Pick a problem.<br>Meet a tool.</h2></div><p>Published products first.<br>Prototypes clearly marked.</p></div><div class="filters" role="group" aria-label="Filter projects">'''
+index=header('EdryStarz — software projects','Browser extensions, local AI learning tools and Windows utilities.')+'''<main id="main"><section class="hero"><div class="hero-media" aria-hidden="true"><img src="/assets/hero-poster.webp" alt="" fetchpriority="high"><video muted loop playsinline preload="none" data-ambient-video></video></div><div class="hero-copy"><div class="eyebrow">INDEPENDENT DEVELOPER</div><h1>Software by<br>EdryStarz<span>.</span></h1><p>Browser extensions, Windows apps<br>and tools for learning English.</p><a class="button" href="#projects">Explore projects <span>↗</span></a></div><div class="hero-bottom"><span>01 — SELECTED WORK</span><button type="button" class="video-control" data-video-control hidden>Pause background</button><a href="#projects" aria-label="Scroll to selected projects">↓</a></div></section><section class="catalog" id="projects"><div class="section-heading"><div class="eyebrow">THE COLLECTION</div><h2>Selected projects<span> / 07</span></h2></div><div class="filters" role="group" aria-label="Filter projects">'''
 index+=''.join(f'<button type="button" data-filter="{x}" aria-pressed="{str(x=="All").lower()}">{x}</button>' for x in ['All','Extensions','Learning','Desktop','Media'])
-index+='</div><div class="grid">'+''.join(card(p,i) for i,p in enumerate(PROJECTS,1))+'''</div></section><section class="closing"><div class="eyebrow">FOUND SOMETHING USEFUL?</div><h2>Send it to someone<br>who needs it.</h2><p>Every project has its own link, clear setup and an honest description.</p>'''+share(BASE+'/')+'</section></main>'+footer()
+index+='</div><div class="grid">'+''.join(card(p,i) for i,p in enumerate(PROJECTS,1))+'</div></section></main>'+footer()
 (ROOT/'index.html').write_text(index,encoding='utf-8')
 for p in PROJECTS:
- path=p['slug']+'/'; d=ROOT/p['slug'];d.mkdir(exist_ok=True)
- text=header(p['name']+' — EdryStarz',p['description'],path,'assets/'+p['slug']+'.png')+f'''<main id="main"><section class="project-hero"><a class="back" href="/#projects">← All projects</a><div class="eyebrow">{p['category'].upper()} / {p['status'].upper()}</div><h1>{p['name']}</h1><p class="tagline">{p['tag']}</p><p class="lead">{p['description']}</p><div class="actions"><a class="button" href="{p['url']}">{p['action']} ↗</a><a class="button secondary" href="{p['secondary']}">{p['secondary_label']} ↗</a></div></section><section class="detail-grid">{art(p)}<div><div class="eyebrow">WHAT IT DOES</div><h2>A closer look.</h2><p>{p['detail']}</p><ul>'''+''.join('<li>'+escape(f)+'</li>' for f in p['features'])+f'''</ul><p class="stack">{p['stack']}</p><aside>{p['note']}</aside></div></section><section class="closing"><div class="eyebrow">SHARE A USEFUL TOOL</div><h2>{p['tag']}</h2>'''+share(BASE+'/'+path)+f'''<a class="text-link" href="/assets/{p['slug']}.png" download>Download share image ↓</a></section></main>'''+footer()
+ path=p['slug']+'/';d=ROOT/p['slug'];d.mkdir(exist_ok=True)
+ text=header(p['name']+' — EdryStarz',p['description'],path,'assets/'+p['slug']+'.png')+f'''<main id="main"><section class="project-hero"><a class="back" href="/#projects">← All projects</a><div class="eyebrow">{p['category'].upper()} / {p['status'].upper()}</div><h1>{p['name']}</h1><p class="lead">{p['description']}</p><div class="actions"><a class="button" href="{p['url']}">{p['action']} ↗</a><a class="button secondary" href="{p['secondary']}">{p['secondary_label']} ↗</a></div></section><section class="detail-grid"><div><div class="eyebrow">OVERVIEW</div><h2>About the project</h2><p>{p['detail']}</p><ul>'''+''.join('<li>'+escape(f)+'</li>' for f in p['features'])+f'''</ul></div><div class="project-info"><div class="eyebrow">TECHNOLOGY</div><p class="stack">{p['stack']}</p><div class="eyebrow">AVAILABILITY</div><aside>{p['note']}</aside>'''+share(BASE+'/'+path)+f'<a class="text-link" href="/assets/{p["slug"]}.png" download>Download share image ↓</a></div></section></main>'+footer()
  (d/'index.html').write_text(text,encoding='utf-8')
 
 # Typographic social cards, not product screenshots.
 font_path=Path('C:/Windows/Fonts/arialbd.ttf')
 def font(n):return ImageFont.truetype(str(font_path),n) if font_path.exists() else ImageFont.load_default()
-for p in [dict(slug='overview',name='Small tools.',tag='Real usefulness.',color='#d5e88c',category='PROJECT COLLECTION')]+PROJECTS:
- im=Image.new('RGB',(1200,630),'#f4f2ea');draw=ImageDraw.Draw(im)
- draw.rectangle((22,22,1178,608),outline='#20231f',width=2)
- draw.rectangle((40,40,1160,90),fill=p['color'])
- draw.text((65,53),'EDRYSTARZ / '+p['category'].upper(),font=font(24),fill='#20231f')
+for p in [dict(slug='overview',name='EdryStarz',tag='Independent software projects',color='#73b8ff',category='PROJECT COLLECTION')]+PROJECTS:
+ im=Image.new('RGB',(1200,630),'#080a0f');draw=ImageDraw.Draw(im)
+ draw.rectangle((22,22,1178,608),outline='#343943',width=2)
+ draw.rectangle((40,40,1160,90),fill='#151a25')
+ draw.text((65,53),'EDRYSTARZ / '+p['category'].upper(),font=font(24),fill='#eef1f7')
  words=p['name'].split();lines=[];line=''
  for w in words:
   test=(line+' '+w).strip()
   if draw.textlength(test,font=font(84))>1050:lines.append(line);line=w
   else:line=test
  lines.append(line)
- for i,line in enumerate(lines):draw.text((65,170+i*100),line,font=font(84),fill='#20231f')
- draw.text((65,425),p['tag'],font=font(34),fill='#20231f')
- draw.text((65,540),'edrystarz.github.io/'+('' if p['slug']=='overview' else p['slug']+'/'),font=font(26),fill='#33392d')
+ for i,line in enumerate(lines):draw.text((65,170+i*100),line,font=font(84),fill='#eef1f7')
+ draw.text((65,425),p['category'],font=font(34),fill='#eef1f7')
+ draw.text((65,540),'edrystarz.github.io/'+('' if p['slug']=='overview' else p['slug']+'/'),font=font(26),fill='#a5adbb')
  im.save(ROOT/'assets'/f"{p['slug']}.png")
 
-(ROOT/'assets/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#20231f"/><text x="32" y="46" text-anchor="middle" fill="#d5e88c" font-family="Arial" font-weight="bold" font-size="44">e</text></svg>')
+(ROOT/'assets/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#080a0f"/><text x="32" y="46" text-anchor="middle" fill="#73b8ff" font-family="Arial" font-weight="bold" font-size="44">e</text></svg>')
 (ROOT/'.nojekyll').touch()
 (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+BASE+'/sitemap.xml\n')
 (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+BASE+'/'+path+'</loc></url>' for path in ['']+[p['slug']+'/' for p in PROJECTS])+'</urlset>')
