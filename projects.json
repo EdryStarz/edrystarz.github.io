@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "stars-about-war",
+    "name": "Stars About War",
+    "category": "Extensions",
+    "status": "Published",
+    "color": "#d5e88c",
+    "tag": "Context, right on YouTube.",
+    "description": "See source-linked classifications beside YouTube channels and videos, without leaving the page.",
+    "detail": "An unofficial extension displaying records from Stars About War. Labels link to the source so you can review its reasoning. Classifications belong to the source; this extension is not an independent fact-checker.",
+    "features": [
+      "Labels across YouTube feeds, search results and channel pages",
+      "Local channel matching and scheduled feed updates",
+      "Cached fallback data and Ukrainian / Russian localization"
+    ],
+    "stack": "JavaScript \u00b7 Manifest V3 \u00b7 Chrome APIs",
+    "action": "Install for Chrome",
+    "url": "https://chromewebstore.google.com/detail/hehkapopfhfcoegmccjcdppmdmioigid",
+    "secondary": "https://github.com/EdryStarz/EdryStarz/blob/main/projects/stars-about-war.md",
+    "secondary_label": "Technical overview",
+    "note": "Published in Chrome Web Store. Store version and availability can change.",
+    "motif": "SOURCE \u2192 CHANNEL \u2192 CONTEXT"
+  },
+  {
+    "slug": "alabuga-detector",
+    "name": "Alabuga Detector",
+    "category": "Extensions",
+    "status": "Published",
+    "color": "#f7aa89",
+    "tag": "A label. A source. Your judgement.",
+    "description": "Recognize YouTube channels listed in the Alabuga advertising database, with links to source material.",
+    "detail": "A browser extension showing channel-level labels based on gubanovfiles.com. A label refers to the channel record, not necessarily the video you are watching. Review the original evidence before drawing conclusions.",
+    "features": [
+      "Local matching by channel ID, handle or unique name",
+      "Background database updates with a cached fallback",
+      "Available for Chrome and Firefox"
+    ],
+    "stack": "JavaScript \u00b7 WebExtensions \u00b7 HTML / CSS",
+    "action": "Install for Chrome",
+    "url": "https://chromewebstore.google.com/detail/ngfbnchnfaijhmckphhfkhnackjbidog",
+    "secondary": "https://addons.mozilla.org/en-US/firefox/addon/alabuga-channel-detector/",
+    "secondary_label": "Install for Firefox",
+    "note": "Published browser extension. Source records are maintained by gubanovfiles.com.",
+    "motif": "CHANNEL \u2192 RECORD \u2192 SOURCE"
+  },
+  {
+    "slug": "english-memory",
+    "name": "English Memory",
+    "category": "Learning",
+    "status": "Prototype",
+    "color": "#b8c6f3",
+    "tag": "Hear it. Save it. Remember it.",
+    "description": "Turn English from your microphone or PC audio into vocabulary cards with local AI and spaced repetition.",
+    "detail": "A native Windows application using local Whisper transcription and language-model analysis. Your vocabulary lives in SQLite on your device. Model-generated translations and level labels need human review.",
+    "features": [
+      "Microphone / PC audio capture with explicit start and pause",
+      "Local vocabulary, subtitle imports and review scheduling",
+      "Windows x64 build verified; 74 default behavior checks passed"
+    ],
+    "stack": "C# \u00b7 .NET 10 \u00b7 WinUI 3 \u00b7 Whisper \u00b7 SQLite",
+    "action": "Get source & setup",
+    "url": "https://github.com/EdryStarz/english-memory",
+    "secondary": "https://github.com/EdryStarz/english-memory#build-and-run",
+    "secondary_label": "Build instructions",
+    "note": "Windows 11 x64. Requires building from source and downloading models. No installer is hosted here.",
+    "motif": "LISTEN \u2192 CAPTURE \u2192 RECALL"
+  },
+  {
+    "slug": "english-b2-tracker",
+    "name": "English B2 Tracker",
+    "category": "Learning",
+    "status": "Prototype",
+    "color": "#b8dcc8",
+    "tag": "A plan you can actually follow.",
+    "description": "A 12-week English study roadmap with daily tasks, vocabulary, an error log and progress stored in your browser.",
+    "detail": "A local-first study planner built with Next.js and IndexedDB. It organizes practice and records progress; it does not certify B2 proficiency. Export JSON backups before clearing browser data.",
+    "features": [
+      "Daily tasks, weekly reflections and a study calendar",
+      "Vocabulary practice, focus timer and error log",
+      "Production build, lint and TypeScript checks passed"
+    ],
+    "stack": "TypeScript \u00b7 React \u00b7 Next.js \u00b7 IndexedDB",
+    "action": "Get source & setup",
+    "url": "https://github.com/EdryStarz/english-b2-tracker",
+    "secondary": "https://github.com/EdryStarz/english-b2-tracker#run-locally",
+    "secondary_label": "Run locally",
+    "note": "This page introduces the project. It is not a hosted tracker demo. Initial sample entries are examples.",
+    "motif": "PLAN \u2192 PRACTICE \u2192 PROGRESS"
+  },
+  {
+    "slug": "textflow",
+    "name": "TextFlow",
+    "category": "Desktop",
+    "status": "Prototype",
+    "color": "#e4d4ae",
+    "tag": "Type less. Keep your flow.",
+    "description": "Reusable text snippets, global hotkeys and a quick-search palette for Windows.",
+    "detail": "A portable Windows utility for Unicode text snippets, shortcuts and QuickTextPaste imports. Paste requests are serialized; the inserted text remains on the clipboard.",
+    "features": [
+      "Global hotkeys and a searchable snippet palette",
+      "Portable JSON storage and Win32 input integration",
+      "Nine behavior checks passed on Windows"
+    ],
+    "stack": "C# \u00b7 .NET 8 \u00b7 WPF \u00b7 Win32",
+    "action": "Get source & setup",
+    "url": "https://github.com/EdryStarz/TextFlow",
+    "secondary": "https://github.com/EdryStarz/TextFlow#run-from-source",
+    "secondary_label": "Run from source",
+    "note": "Windows 10/11. Build from source with the .NET 8 SDK.",
+    "motif": "SAVE \u2192 SEARCH \u2192 PASTE"
+  },
+  {
+    "slug": "shorts-studio",
+    "name": "Shorts Studio",
+    "category": "Media",
+    "status": "In Development",
+    "color": "#d6bbef",
+    "tag": "Long video. Short workflow.",
+    "description": "A local video pipeline for transcription, clip ranking, vertical reframing and subtitles.",
+    "detail": "A Python backend and React interface for local media processing. Completed pipeline stages can be reused. The frontend build was checked; a full Docker/media processing run was not verified in this portfolio review.",
+    "features": [
+      "Local faster-whisper transcription and scene analysis",
+      "Vertical reframing, subtitles and FFmpeg export",
+      "Stage persistence and optional publishing connectors"
+    ],
+    "stack": "Python \u00b7 FastAPI \u00b7 React \u00b7 FFmpeg",
+    "action": "Explore the repository",
+    "url": "https://github.com/EdryStarz/shorts-studio",
+    "secondary": "https://github.com/EdryStarz/shorts-studio#run-with-docker",
+    "secondary_label": "Docker setup",
+    "note": "In development. External publishing requires configuration and is disabled by default.",
+    "motif": "TRANSCRIBE \u2192 FRAME \u2192 EXPORT"
+  },
+  {
+    "slug": "windows-counter",
+    "name": "Windows Counter",
+    "category": "Desktop",
+    "status": "Prototype",
+    "color": "#d2d5ce",
+    "tag": "One number. Always there.",
+    "description": "A compact Windows desktop counter with keyboard controls and persistent storage.",
+    "detail": "A focused Tkinter utility with increment, decrement, manual values and always-on-top mode. Atomic writes preserve the current value between sessions.",
+    "features": [
+      "Buttons, arrow keys and manual integer input",
+      "Always-on-top mode and reset confirmation",
+      "Persistence and malformed-data fallback verified"
+    ],
+    "stack": "Python \u00b7 Tkinter",
+    "action": "Get source & setup",
+    "url": "https://github.com/EdryStarz/windows-counter",
+    "secondary": "https://github.com/EdryStarz/windows-counter#run-from-source",
+    "secondary_label": "Run from source",
+    "note": "Python 3.10 or newer with Tkinter. Source project; no installer is hosted here.",
+    "motif": "COUNT \u2192 SAVE \u2192 CONTINUE"
+  }
+]
