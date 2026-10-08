@@ -132,6 +132,28 @@
     "motif": "TRANSCRIBE \u2192 FRAME \u2192 EXPORT"
   },
   {
+    "slug": "flystream",
+    "name": "FlyStream Lab",
+    "category": "Media",
+    "status": "Prototype",
+    "color": "#d6bbef",
+    "tag": "A virtual fly takes the stage.",
+    "description": "An experimental 3D virtual streamer with a control room, OBS view and interactive polls.",
+    "detail": "A React and Three.js prototype combining shared streamer state with a scientific anatomy workbench. Demo mode works without provider credentials. Real KICK integration and external broadcasting remain unverified.",
+    "features": [
+      "Moderated chat, polls and two scored games",
+      "Rights-gated local media and video-only vertical WebM export",
+      "Local verification documented; clean-install CI currently fails"
+    ],
+    "stack": "TypeScript \u00b7 React \u00b7 Three.js \u00b7 Node.js \u00b7 Vite",
+    "action": "Explore the repository",
+    "url": "https://github.com/EdryStarz/FlyStream",
+    "secondary": "https://github.com/EdryStarz/FlyStream/blob/main/docs/VERIFICATION.md",
+    "secondary_label": "Verification and limitations",
+    "note": "Source prototype, no hosted demo. Node.js type declarations are missing in the clean-install build; dependency correction is required. OBS/RTMP setup is external.",
+    "motif": "SOURCE \u2192 MOOD \u2192 STREAM"
+  },
+  {
     "slug": "windows-counter",
     "name": "Windows Counter",
     "category": "Desktop",
