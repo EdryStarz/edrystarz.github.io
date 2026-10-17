@@ -154,6 +154,72 @@
     "motif": "SOURCE \u2192 MOOD \u2192 STREAM"
   },
   {
+    "slug": "ashen-oath-overview",
+    "name": "Ashen Oath",
+    "category": "Games",
+    "status": "Prototype",
+    "color": "#e4d4ae",
+    "tag": "Habits become hero progress.",
+    "description": "An offline Android habit planner with pixel-art battles, equipment and local save backups.",
+    "detail": "Mark self-reported habits to earn experience and prepare a hero for three forest opponents. A signed Android 0.7.2 APK and source are public. Release documentation records emulator checks for 0.7.1 and asset/signature checks for 0.7.2; physical-device performance was not profiled.",
+    "features": [
+      "Scheduled habits, rest days and a progress journal",
+      "Hero progression, equipment and tactical battles",
+      "JSON save export/import; no account required"
+    ],
+    "stack": "Godot \u00b7 GDScript \u00b7 Android",
+    "action": "Download Android APK",
+    "url": "https://github.com/EdryStarz/ashen-oath/releases/download/v0.7.2/ashen-oath-0.7.2-release.apk",
+    "secondary": "https://edrystarz.github.io/ashen-oath/",
+    "secondary_label": "Game website and source links",
+    "note": "Russian game interface. Android 7.0+, ARM64 / x86_64. APK release available; store approval not verified. No browser game demo. Export saves before replacing a debug build.",
+    "motif": "HABIT \u2192 EXPERIENCE \u2192 ADVENTURE"
+  },
+  {
+    "slug": "drosophila-overview",
+    "name": "Drosophila",
+    "category": "Games",
+    "status": "Prototype",
+    "color": "#b8dcc8",
+    "tag": "A pocket pet and a retro arcade.",
+    "description": "An Android virtual pet and retro arcade with a public APK release.",
+    "detail": "A virtual-pet project distributed as an Android APK. The public repository contains the game website and promotional materials; the application source remains private. APK availability is verified, but this portfolio review did not install or retest the release.",
+    "features": [
+      "Virtual-pet and retro-arcade modes",
+      "Android 0.15.1 APK available from GitHub Releases",
+      "Dedicated game page with screenshots and a trailer"
+    ],
+    "stack": "Android \u00b7 Kotlin (private application source)",
+    "action": "Get Android APK",
+    "url": "https://github.com/EdryStarz/drosophila-game/releases/tag/v0.15.1",
+    "secondary": "https://edrystarz.github.io/drosophila-game/",
+    "secondary_label": "Game website",
+    "note": "Public APK and game materials; application source is not included. Store approval and a browser-playable demo are not verified.",
+    "motif": "PET \u2192 PLAY \u2192 RETURN"
+  },
+  {
+    "slug": "careerpilot-local",
+    "name": "CareerPilot Local",
+    "category": "Desktop",
+    "status": "In Development",
+    "color": "#b8c6f3",
+    "tag": "A local model for your job search.",
+    "description": "CV-based job discovery with local AI, a private Telegram bot and opt-in application workflows.",
+    "detail": "A Python public preview extending fikstt2/hh-ai-agent. Searches public job boards and configured ATS/Telegram sources. Supported submissions require explicit configuration; unknown forms, login and missing required facts can need human review. Successful CI does not prove live compatibility with every employer website.",
+    "features": [
+      "CV import and local Ollama inference",
+      "Dry-run discovery with sending disabled by default",
+      "Private application ledger and supported opt-in form routes"
+    ],
+    "stack": "Python \u00b7 Playwright \u00b7 Ollama \u00b7 Telegram",
+    "action": "Get source and setup",
+    "url": "https://github.com/EdryStarz/careerpilot-local",
+    "secondary": "https://github.com/EdryStarz/careerpilot-local/blob/codex/public-release/docs/MULTISOURCE.md",
+    "secondary_label": "Support matrix and limitations",
+    "note": "Public preview v0.2.0; not a hosted application or universal unattended applicant. Requires local setup and personal credentials. Based on an upstream MIT project.",
+    "motif": "CV \u2192 MATCH \u2192 REVIEW"
+  },
+  {
     "slug": "windows-counter",
     "name": "Windows Counter",
     "category": "Desktop",
