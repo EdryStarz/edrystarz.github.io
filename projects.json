@@ -220,6 +220,28 @@
     "motif": "CV \u2192 MATCH \u2192 REVIEW"
   },
   {
+    "slug": "crimeweb-collector",
+    "name": "CrimeWeb RSS Collector",
+    "category": "Automation",
+    "status": "In Development",
+    "color": "#b8dcc8",
+    "tag": "Scheduled feeds. Bounded transport.",
+    "description": "A scheduled RSS transport with regional queue balancing, bounded retries and aggregate operational reports.",
+    "detail": "A standalone Node.js collector run by GitHub Actions. A private server supplies authorized due feeds and validates persisted results. The public repository contains transport code, not the CrimeWeb map, database, classifier or geolocation implementation. Recent workflow runs succeeded; they do not independently verify reported events.",
+    "features": [
+      "Interleaved regional feed queues and resumable maintenance requests",
+      "Bounded public HTTP fetching with redirect and address checks",
+      "Aggregate operational reporting without article bodies"
+    ],
+    "stack": "Node.js \u00b7 JavaScript \u00b7 RSS \u00b7 GitHub Actions",
+    "action": "Get source and setup",
+    "url": "https://github.com/EdryStarz/crimeweb-europe-collector",
+    "secondary": "https://github.com/EdryStarz/crimeweb-europe-collector/actions",
+    "secondary_label": "Workflow runs",
+    "note": "Beta integration requiring a compatible private server and scoped credential. No standalone map demo or packaged release. Scheduled runs are best effort; news reports are not verified facts or crime-rate comparisons.",
+    "motif": "QUEUE \u2192 FETCH \u2192 CONFIRM"
+  },
+  {
     "slug": "windows-counter",
     "name": "Windows Counter",
     "category": "Desktop",
